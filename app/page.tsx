@@ -4,57 +4,62 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#111111] flex flex-col overflow-hidden">
 
-      {/* SVG noise texture */}
-      <svg className="pointer-events-none absolute inset-0 w-full h-full opacity-[0.035]" aria-hidden="true">
+      {/* Noise texture */}
+      <svg className="pointer-events-none absolute inset-0 w-full h-full opacity-[0.045]" aria-hidden="true">
         <filter id="noise">
-          <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+          <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="4" stitchTiles="stitch" />
           <feColorMatrix type="saturate" values="0" />
         </filter>
         <rect width="100%" height="100%" filter="url(#noise)" />
       </svg>
 
-      {/* Radial accent glow */}
+      {/* Subtle green glow — top center */}
       <div
-        className="pointer-events-none absolute -top-64 -left-64 w-[600px] h-[600px] rounded-full"
-        style={{ background: 'radial-gradient(circle, rgba(0,229,160,0.06) 0%, transparent 70%)' }}
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px]"
+        style={{ background: 'radial-gradient(ellipse at top, rgba(0,229,160,0.07) 0%, transparent 65%)' }}
         aria-hidden="true"
       />
 
-      {/* Main content */}
-      <div className="relative flex-1 flex flex-col justify-center px-8 md:px-20 max-w-4xl">
-
-        {/* Logo */}
-        <div className="mb-16">
-          <Image
-            src="/logo.png"
-            alt="Norr Studio"
-            width={250}
-            height={100}
-            className="w-28 h-auto object-contain"
-            priority
-          />
+      {/* Header */}
+      <header className="relative z-10 flex items-center justify-between px-6 md:px-10 pt-7">
+        <Image
+          src="/logo.png"
+          alt="Norr Studio"
+          width={120}
+          height={48}
+          className="w-24 h-auto object-contain opacity-90"
+          priority
+        />
+        <div className="text-right space-y-1">
+          <p className="text-[#00E5A0] text-[9px] tracking-[0.2em] uppercase font-medium">Helsinki, Finland</p>
+          <p className="text-[#333333] text-[9px] tracking-[0.2em] uppercase">Est. 2024</p>
         </div>
+      </header>
 
-        {/* Eyebrow */}
-        <p className="text-[#00E5A0] text-xs tracking-widest uppercase mb-6 font-medium">
-          ● Norr Studio
-        </p>
-
-        {/* Headline */}
-        <h1 className="text-7xl md:text-8xl font-bold text-white tracking-tight leading-[0.95] mb-8">
-          Coming<br />soon.
+      {/* Headline — full-bleed editorial */}
+      <div className="relative z-10 flex-1 flex flex-col justify-center px-4 md:px-6 mt-2">
+        <h1
+          className="font-bold text-white leading-[0.86] tracking-[-0.04em] select-none"
+          style={{ fontSize: 'clamp(70px, 16.5vw, 260px)' }}
+        >
+          <span className="block">Coming</span>
+          <span className="block" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.15)', color: 'transparent' }}>soon.</span>
         </h1>
 
-        {/* Subline */}
-        <p className="text-[#888888] text-lg max-w-sm leading-relaxed mb-10">
-          We&apos;re putting the finishing touches on something great.
-        </p>
+        {/* Sub-section */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mt-8 md:mt-10 px-1">
+          <div>
+            <p className="text-[#00E5A0] text-[9px] tracking-[0.2em] uppercase font-medium mb-3">
+              ● Norr Studio
+            </p>
+            <p className="text-[#555555] text-sm md:text-base leading-relaxed max-w-[280px]">
+              We&apos;re putting the finishing touches on something great.
+            </p>
+          </div>
 
-        {/* Button */}
-        <div>
           <a
             href="mailto:marijus@norrstudio.fi"
-            className="inline-flex items-center bg-[#00E5A0] text-[#111111] font-semibold text-sm px-8 py-3.5 rounded-full hover:opacity-90 active:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00E5A0] transition-opacity shadow-[0_0_24px_rgba(0,229,160,0.25)]"
+            className="inline-flex self-start items-center bg-[#00E5A0] text-[#111111] font-semibold text-sm px-7 py-3.5 rounded-full hover:opacity-90 active:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00E5A0] transition-opacity shadow-[0_0_40px_rgba(0,229,160,0.18)]"
           >
             Get in touch
           </a>
@@ -62,9 +67,10 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="relative border-t border-[#1E1E1E] px-8 md:px-20 py-5 flex items-center justify-between">
-        <p className="text-[#444444] text-xs">Norr Studio · Helsinki, Finland</p>
-        <p className="text-[#444444] text-xs">2025</p>
+      <footer className="relative z-10 border-t border-[#1C1C1C] mt-8 px-6 md:px-10 py-4 flex items-center justify-between">
+        <p className="text-[#2E2E2E] text-[9px] tracking-[0.2em] uppercase">Norr Studio</p>
+        <p className="text-[#2E2E2E] text-[9px] tracking-[0.2em] uppercase">Helsinki · Finland</p>
+        <p className="text-[#2E2E2E] text-[9px] tracking-[0.2em] uppercase">2025</p>
       </footer>
 
     </main>
