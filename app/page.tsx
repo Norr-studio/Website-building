@@ -34,7 +34,7 @@ export default function Home() {
           alt="Norr Studio"
           width={200}
           height={80}
-          className="w-36 h-auto object-contain"
+          className="w-48 h-auto object-contain"
           priority
         />
         <a
@@ -47,10 +47,6 @@ export default function Home() {
 
       {/* Center content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 gap-6">
-        <p className="text-[#00E5A0] text-[10px] tracking-[0.25em] uppercase font-medium">
-          ● Norr Studio
-        </p>
-
         <h1
           className="font-bold text-white leading-[0.88] tracking-[-0.04em]"
           style={{ fontSize: 'clamp(64px, 14vw, 220px)' }}
@@ -70,7 +66,7 @@ export default function Home() {
         <div className="flex items-center gap-6">
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/company/norrstudio"
+            href="https://www.linkedin.com/company/norr-studio/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/40 hover:text-white transition-colors"
@@ -83,7 +79,7 @@ export default function Home() {
 
           {/* Instagram */}
           <a
-            href="https://instagram.com/norrstudio.fi"
+            href="https://www.instagram.com/norr.agency/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/40 hover:text-white transition-colors"
@@ -109,7 +105,7 @@ export default function Home() {
         </div>
 
         <p className="text-white/20 text-[9px] tracking-[0.2em] uppercase">
-          © 2025 Norr Studio · Helsinki, Finland
+          © 2026 Norr Studio · Helsinki, Finland
         </p>
       </footer>
 
