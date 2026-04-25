@@ -27,7 +27,7 @@ export default function Home() {
           alt="Norr Studio"
           width={120}
           height={48}
-          className="w-24 h-auto object-contain opacity-90"
+          className="w-40 h-auto object-contain opacity-90"
           priority
         />
         <div className="text-right space-y-1">
