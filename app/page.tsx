@@ -13,10 +13,61 @@ export default function Home() {
         <rect width="100%" height="100%" filter="url(#noise)" />
       </svg>
 
-      {/* Subtle green glow — top center */}
+      {/* Glass card 1 — large, tilted left, center */}
       <div
-        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px]"
-        style={{ background: 'radial-gradient(ellipse at top, rgba(0,229,160,0.07) 0%, transparent 65%)' }}
+        className="pointer-events-none absolute"
+        style={{
+          width: '55vw',
+          height: '65vh',
+          top: '8%',
+          left: '22%',
+          transform: 'rotate(-18deg)',
+          borderRadius: '2.5rem',
+          background: 'rgba(255,255,255,0.03)',
+          backdropFilter: 'blur(2px)',
+          border: '1px solid rgba(255,255,255,0.06)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Glass card 2 — smaller, tilted right, bottom-right */}
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          width: '38vw',
+          height: '50vh',
+          top: '35%',
+          left: '45%',
+          transform: 'rotate(12deg)',
+          borderRadius: '2.5rem',
+          background: 'rgba(255,255,255,0.025)',
+          backdropFilter: 'blur(1.5px)',
+          border: '1px solid rgba(255,255,255,0.05)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Glass card 3 — thin strip, bottom */}
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          width: '30vw',
+          height: '35vh',
+          top: '55%',
+          left: '8%',
+          transform: 'rotate(-8deg)',
+          borderRadius: '2rem',
+          background: 'rgba(255,255,255,0.02)',
+          backdropFilter: 'blur(1px)',
+          border: '1px solid rgba(255,255,255,0.04)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Subtle green glow */}
+      <div
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px]"
+        style={{ background: 'radial-gradient(ellipse at top, rgba(0,229,160,0.06) 0%, transparent 65%)' }}
         aria-hidden="true"
       />
 
@@ -36,7 +87,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Headline — full-bleed editorial */}
+      {/* Headline */}
       <div className="relative z-10 flex-1 flex flex-col justify-center px-4 md:px-6 mt-2">
         <h1
           className="font-bold text-white leading-[0.86] tracking-[-0.04em] select-none"
