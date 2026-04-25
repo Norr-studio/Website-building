@@ -11,7 +11,7 @@ export default function Home() {
           height={100}
           className="w-40 h-auto object-contain"
           priority
-        />
+        />  
 
         <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-none">
           Coming soon.
